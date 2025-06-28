@@ -67,15 +67,6 @@ python app.py
 http://localhost/strapps/index.html
 ```
 
-## 📁 Struktur Folder 
-Strapps/
- │
- ├── App.py
- ├── index.html
- ├── model_str.path
- │
- └── README.md
-
 
 ## 🖼️ Tampilan Antarmuka
 ![image](https://github.com/user-attachments/assets/9196688a-6783-4d24-826a-b7db2ec5caf2)

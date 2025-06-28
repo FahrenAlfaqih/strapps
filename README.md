@@ -1,78 +1,77 @@
 # 🧠 STRapps – Scene Text Recognition Web App
 
-**STRapps** adalah aplikasi web berbasis Python dan Flask yang memungkinkan pengguna mengunggah gambar dan mendapatkan hasil ekstraksi teks secara otomatis menggunakan model deep learning STR (Scene Text Recognition). Model dilatih menggunakan arsitektur CRNN (CNN + BiLSTM + CTC) dan dapat mengenali kata dari gambar dunia nyata.
+**STRapps** is a web-based application built with Python and Flask that enables users to upload an image and automatically extract text using a deep learning-based Scene Text Recognition (STR) model. The model is trained using the CRNN architecture (CNN + BiLSTM + CTC) and is capable of recognizing words from real-world images.
 
 ---
 
 ## 📦 Dataset – IIIT 5K-Word
 
-Dataset yang digunakan adalah **IIIT 5K-Word**, benchmark populer untuk scene text recognition:
+This project uses the **IIIT 5K-Word** dataset, a popular benchmark for scene text recognition:
 
-- 📸 Berisi 5.000+ gambar teks (satu kata per gambar)
-- 🔤 Label disediakan dalam format string satu kata (word-level)
-- 🧪 Training set: 2.000 gambar, Testing set: 3.000 gambar
-- 🌍 Gambar dikumpulkan dari internet dan mencerminkan kondisi dunia nyata
-- 📂 Format `.mat` dengan label dan nama file
+- 📸 Contains 5,000+ cropped word images (one word per image)
+- 🔤 Labels are provided as word-level strings
+- 🧪 Training set: 2,000 images; Testing set: 3,000 images
+- 🌍 Images are collected from the internet and reflect real-world scenes
+- 📂 Stored in `.mat` format with labels and image filenames
 
-🔗 [Download Dataset IIIT5K](http://cvit.iiit.ac.in/research/projects/cvit-projects/scene-text-recognition)
+🔗 [Download IIIT5K Dataset](http://cvit.iiit.ac.in/research/projects/cvit-projects/scene-text-recognition)
 
 ---
 
 ## 🔄 Data Preprocessing
 
-Untuk meningkatkan generalisasi model, preprocessing gambar meliputi:
+To enhance model generalization, each input image undergoes the following preprocessing steps:
 
-- Konversi ke grayscale
-- Resize ke dimensi 32x128 piksel
-- Normalisasi piksel ke format tensor
-- Transformasi dimensi untuk input ke CNN → LSTM
-
----
-
-## ⚙️ Fitur Aplikasi
-
-- 📤 Upload gambar dengan UI stylish (Tailwind CSS)
-- 🧠 Deteksi dan ekstraksi teks otomatis dari gambar menggunakan model STR
-- 🌐 Web interface ringan (Flask + HTML + JS)
-- 🎯 Model inference akurat dan cepat
-- 🖼️ Tampilkan hasil prediksi teks secara langsung
-- 🚀 Siap deploy ke server publik / cloud
+- Convert to grayscale
+- Resize to 32×128 pixels
+- Normalize pixel values to tensor format
+- Reshape dimensions to match input for CNN → LSTM
 
 ---
 
-## 🧪 Performa Model
+## ⚙️ Application Features
 
-Model dilatih selama 30 epoch dengan loss menurun dari **4.28 → 0.10**. Evaluasi akurasi menggunakan pengujian string-level menunjukkan performa tinggi pada test set IIIT5K.
+- 📤 Upload an image via a stylish Tailwind CSS-based UI
+- 🧠 Automatically detect and extract text from uploaded images using the STR model
+- 🌐 Lightweight web interface (Flask + HTML + JS)
+- 🎯 Fast and accurate model inference
+- 🖼️ Display prediction result instantly on screen
+- 🚀 Ready for deployment to public servers or cloud environments
+
+---
+
+## 🧪 Model Performance
+
+The model was trained for 30 epochs, with training loss decreasing from **4.28 → 0.10**. Accuracy evaluation using string-level comparison shows high performance on the IIIT5K test set.
 
 > Model: `SimpleSTR`  
-> Arsitektur: CNN → BiLSTM → FC + CTC Loss  
-> Evaluasi: String-level accuracy via CTC decoding
+> Architecture: CNN → BiLSTM → FC + CTC Loss  
+> Evaluation: String-level accuracy using CTC decoding
 
 ---
 
-## 🚀 Cara Menjalankan Aplikasi
+## 🚀 How to Run the Application
 
 ```bash
-# 1. Clone repo
+# 1. Clone the repository
 git clone https://github.com/FahrenAlfaqih/strapps.git
 cd strapps
 
-# 2. Install dependency
+# 2. Install dependencies
 pip install flask flask-cors torch torchvision
 
-# 3. Jalankan server Flask
+# 3. Run Flask backend
 python app.py
 
-# 4. Buka frontend HTML di browser
+# 4. Open frontend in your browser
 http://localhost/strapps/index.html
 ```
 
-
-## 🖼️ Tampilan Antarmuka
+## 🖼️ Interfaces
 ![image](https://github.com/user-attachments/assets/9196688a-6783-4d24-826a-b7db2ec5caf2)
 
 ## 🙋‍♂️ Kontributor
-Dikembangkan oleh Fahren Alfaqih sebagai bagian dari proyek Computer Vision STR (Scene Text Recognition) berbasis web.
+Developed by Fahren Alfaqih as part of a web-based Scene Text Recognition (STR) Computer Vision project.
 
 ## 📄 Lisensi
 MIT License © 2025 Fahren Alfaqih

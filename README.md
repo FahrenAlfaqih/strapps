@@ -1,6 +1,6 @@
 # 🧠 STRapps – Scene Text Recognition Web App
 
-**STRapps** adalah aplikasi web berbasis Python & Flask yang memungkinkan pengguna untuk mengunggah gambar dan mendapatkan hasil teks dari model OCR berbasis deep learning (CRNN). Proyek ini cocok untuk kebutuhan pemindaian dokumen, label produk, kartu ID, dan lain-lain.
+**STRapps** adalah aplikasi web berbasis Python & Flask yang memungkinkan pengguna untuk mengunggah gambar dan mendapatkan hasil teks dari model OCR berbasis deep learning (CRNN).
 
 ---
 

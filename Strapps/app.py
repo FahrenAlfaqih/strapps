@@ -1,10 +1,10 @@
-from flask import Flask, request, jsonify
+from flask import Flask, request, jsonify, send_from_directory
 from flask_cors import CORS
 from PIL import Image
 import torch
 import torch.nn as nn
 import torchvision.transforms as transforms
-import io
+import os
 
 # ======= Konfigurasi charset dan decoding =======
 CHARSET = "0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZ"
@@ -57,6 +57,10 @@ transform = transforms.Compose([
     transforms.Resize((32, 128)),  # width 128 sesuai reshape di model
     transforms.ToTensor()
 ])
+
+@app.route("/")
+def serve_index():
+    return send_from_directory(os.path.dirname(os.path.abspath(__file__)), "index.html")
 
 @app.route("/predict", methods=["POST"])
 def predict():

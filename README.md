@@ -68,15 +68,12 @@ http://localhost/strapps/index.html
 ```
 
 ## 🖼️ Interfaces
-### 📸 Image Test
-![image](https://github.com/user-attachments/assets/bf826399-2a29-4beb-b533-453aff11c373)
+![image](https://github.com/user-attachments/assets/5e0f807e-2ea5-4e77-8516-a58b9aaa87b5)
 
-### 📝 Result
-![image](https://github.com/user-attachments/assets/9196688a-6783-4d24-826a-b7db2ec5caf2)
 
-## 🙋‍♂️ Kontributor
+## 🙋‍♂️ Contributor
 Developed by Fahren Alfaqih as part of a web-based Scene Text Recognition (STR) Computer Vision project.
 
-## 📄 Lisensi
+## 📄 License
 MIT License © 2025 Fahren Alfaqih
 
